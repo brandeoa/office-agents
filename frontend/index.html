@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Escritório de Agentes</title>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; }
+    header { padding: 12px 16px; font-weight: 600; }
+    #game { display: flex; justify-content: center; height: 460px; max-width: 960px; margin: 0 auto; }
+    #panel { max-width: 960px; margin: 0 auto; padding: 12px 16px; }
+    form { display: flex; gap: 8px; }
+    input { flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #1e293b; color: inherit; }
+    button { padding: 10px 16px; border: 0; border-radius: 8px; background: #6366f1; color: white; cursor: pointer; }
+    button:disabled { opacity: .5; cursor: wait; }
+    .card { background: #1e293b; border-radius: 8px; padding: 10px 12px; margin-top: 10px; white-space: pre-wrap; }
+    .card b { display: block; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <header>🏢 Escritório de Agentes</header>
+  <div id="game"></div>
+  <div id="panel">
+    <form id="form">
+      <input id="task" placeholder="Ex.: crie um post sobre produtividade com IA" autocomplete="off" />
+      <button id="send">Enviar</button>
+    </form>
+    <div id="log"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+  <script src="/static/game.js"></script>
+</body>
+</html>
